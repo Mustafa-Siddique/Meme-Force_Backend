@@ -1,3 +1,4 @@
+import {isUniqueAcrossAllDocuments} from '../lib/isUniqueAcrossAllDocuments'
 export default{
     name:"projectCards",
     type:"document",
@@ -19,6 +20,16 @@ export default{
             name:"summary",
             type:"string",
             title:"Summary",
+        },
+        {
+            name:"slug",
+            type:"slug",
+            title:"Slug",
+            options:{
+                source:"name",
+                isUnique: isUniqueAcrossAllDocuments,
+            },
+            validation: Rule => Rule.required(),
         },
         {
             title:"Website",
