@@ -48,7 +48,7 @@ export default{
         },
         {
             title:"Logo",
-            name:"logo",
+            name:"image",
             type:"image",
             validation: Rule => Rule.required(),
         },
@@ -60,6 +60,11 @@ export default{
         {
             title:"Market Cap",
             name:"mcap",
+            type:"string",
+        },
+        {
+            title:"SoftHard Cap",
+            name:"schc",
             type:"string",
         },
         {
